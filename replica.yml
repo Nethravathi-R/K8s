@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-jenkins-replica
+  labels:  //for grouping 
+    app: jenkins
+spec:
+  replicas: 2 //mandetory
+  selector: //holds 2 pods together
+    matchLabels:
+	  app: nethra // e name inda pods together agirutte
+  template: 
+    metadata:
+	  name: jenkins-2
+	  labels:
+	    app: nethra  // matchLabels and metadata label should macth , then only it will hold
+  spec:
+    container:
+      - name: jenkins
+	    image: jenkins/jenkins:lts
