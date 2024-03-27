@@ -1,0 +1,10 @@
+apiVersion: v1 #api version
+kind: Pod  #what object going to depoloy
+metadata:
+  name: jenkins-tomcat
+spec:
+  containers:
+    - name: jenkins
+      image: jenkins/jenkins:lts
+    - name: tomcat
+      image: tomcat:9.0
