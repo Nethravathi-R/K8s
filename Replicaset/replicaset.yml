@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myreplica
+  labels:
+    app: tomcat
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      name: tomcat-2
+      labels:
+        app: myapp
+    spec:
+      containers: 
+        - name: tomcat-container
+          image: tomcat:8.0
