@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-resourcequota
+  namespace: dev
+spec:
+
+
+#commands to check resourcequota
+#kubectl create ns dev
+#kubectl get ns
+#kubectl get pods -n dev
+#kubectl get resourcequota -n dev
