@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-jenkins-replica-deploy
+  labels:
+    app: jenkins
+spec:
+  replicas: 2
+  strategy:   
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: nethra
+  template:
+    metadata:
+      name: jenkins
+      labels:
+        app: nethra
+    spec:
+      containers:
+        - name: jenkins
+          image: jenkins/jenkins:lts
