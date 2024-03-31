@@ -1,11 +1,16 @@
-
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   name: my-jenkins
   labels:
     app: jenkins
 spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 0
   selector:
     matchLabels:
       app: jenkins
@@ -16,5 +21,6 @@ spec:
     spec:
       containers:
         - name: jenkins
-          image: jenkins/jenkins:2.303.1
-  
+          image: jenkins/jenkins:lts
+      nodeSelector:
+        name: worker1
