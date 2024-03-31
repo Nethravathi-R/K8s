@@ -1,0 +1,9 @@
+apiVerson: v1 //api version
+kind: Pod  //what object going to depoloy
+metadata: 
+  name: jenkins
+  namespace: nethra   //
+spec: 
+  containers:
+    - name: jenkins
+	  image: jenkins/jenkins:lts
