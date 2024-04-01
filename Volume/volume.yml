@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-deployment
+  namespace: mynamespace  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: label-all
+  template:
+    metadata:
+      name: jenkins
+      labels:
+        app: label-all
+    spec:
+      containers:
+        - name: jenkins
+          image: jenkins/jenkins:lts
+          volumeMounts: 
+            - mountPath: /var/jenkins_home
+              name: myvolume-jenkins
+      volumes:
+        - name: myvolume-jenkins
+          hostPath:
+            path: /root/jenkins_volume
+            type: Directory          
+ #in instance create a jenkins_volume directory            
+        
