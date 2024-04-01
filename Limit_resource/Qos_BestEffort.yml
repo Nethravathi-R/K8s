@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-deployment
+  namespace: mynamespace  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: label-all
+  template:
+    metadata:
+      name: jenkins
+      labels:
+        app: label-all
+    spec:
+      containers:
+        - name: jenkins
+          image: jenkins/jenkins:lts
+    #If  we are not specifying anything then Qos will be Bestefforts
+    #kubectl get  pods -n mynamespace
+    #kubectl describe pod jenkins-deployment-5c4477f4c9-fnbq8 -n mynamespace
