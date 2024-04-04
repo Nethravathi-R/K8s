@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: private1
+spec:
+  containers:
+  - name: envars-test-container
+    image: nethra2222/myjenkins:1
+  imagePullSecrets:
+    - name: regcred  
+
+#Create a Secret by providing credentials on the command line
+#kubectl create secret docker-registry regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
+
+
+#<your-registry-server> is your Private Docker Registry FQDN. Use https://index.docker.io/v1/ for DockerHub.
+#<your-name> is your Docker username.
+#<your-pword> is your Docker password.
+#<your-email> is your Docker email.
