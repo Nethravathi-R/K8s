@@ -9,3 +9,5 @@ spec:
   resources:
     requests:
       storage: 5Gi
+#kubectl get pv efs-pv
+# kubectl get pvc efs-claim
