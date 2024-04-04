@@ -15,3 +15,5 @@ spec:
   - name: persistent-storage
     persistentVolumeClaim:
       claimName: efs-claim
+
+      # kubectl exec -ti efs-app -- tail -f /data/out.txt
