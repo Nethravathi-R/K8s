@@ -1,0 +1,6 @@
+jenkins
+http://a9e7c068f8dee4661a42379a68a68c81-1510470753.ap-south-1.elb.amazonaws.com/jenkins/login?from=%2Fjenkins%2F
+tomcat
+https://a9e7c068f8dee4661a42379a68a68c81-1510470753.ap-south-1.elb.amazonaws.com/tomcat
+grafana
+http://a9e7c068f8dee4661a42379a68a68c81-1510470753.ap-south-1.elb.amazonaws.com/grafana/login
