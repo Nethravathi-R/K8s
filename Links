@@ -1,0 +1,59 @@
+29/03/2024
+
+https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/service/annotations/
+30/03/2024
+https://github.com/infracloudio/kubernetes-scheduling-examples/tree/master/nodeAffinity
+
+affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: size
+            operator: In
+            values:
+            - small
+
+02/04/2024
+https://docs.aws.amazon.com/eks/latest/userguide/csi-iam-role.html
+
+https://github.com/kubernetes-sigs/aws-ebs-csi-driver.git
+
+aws iam list-open-id-connect-providers | grep
+
+https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
+
+kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.29"
+
+https://oidc.eks.ap-south-1.amazonaws.com/id/E85AE509F41DA5C74785D210456DAFEF
+https://oidc.eks.ap-south-1.amazonaws.com/id/E85AE509F41DA5C74785D210456DAFEF
+
+
+03/04/2024
+
+https://aws.amazon.com/blogs/storage/persistent-storage-for-kubernetes/
+
+https://kubernetes.io/docs/concepts/configuration/configmap/
+
+Readyness
+
+https://github.com/DeekshithSN/Devops_interview_questions/blob/master/Devops_Best_Practises.md
+
+aws eks update-kubeconfig --name my-eks-cluster
+
+https://kubernetes.io/docs/concepts/configuration/secret/
+
+https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+
+kubectl run -i --tty --image busybox:1.28 dns-test --restart=Never --rm
+
+https://github.com/docker/awesome-compose/tree/master/nginx-golang
+
+Ingress
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+
+https://platform9.com/learn/v1.0/tutorials/nginix-controller-via-yaml
+
+https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.0/deploy/static/provider/cloud/deploy.yaml
+
