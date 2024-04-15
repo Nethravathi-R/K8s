@@ -1,0 +1,8 @@
+Install->  https://helm.sh/docs/intro/install/
+
+helm create jenkins
+helm install jenkins ./jenkins
+helm uninstall jenkins
+helm template jenkins ./jenkins     //just substitute vaue
+helm install jenkins ./jenkins --dry-run ---->validate for error
+helm upgrade jenkins ./jenkins --dry-run  --set replicas=3 --set requestStorage=5Gi
