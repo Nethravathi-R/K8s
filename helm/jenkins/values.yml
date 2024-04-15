@@ -1,0 +1,8 @@
+namespace: 
+storageClass: 
+claimName:
+requestStorage:
+deploymentName: 
+appLabel: 
+replicas: 
+volumeName: 
